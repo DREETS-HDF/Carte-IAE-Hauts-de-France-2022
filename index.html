@@ -66,28 +66,36 @@
         function pop_SIAEconventionnes2023_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Raison sociale'] !== null ? autolinker.link(feature.properties['Raison sociale'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Raison sociale</th>\
+                        <td>' + (feature.properties['Raison sociale'] !== null ? autolinker.link(feature.properties['Raison sociale'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Type de conventionnement'] !== null ? autolinker.link(feature.properties['Type de conventionnement'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Type de conventionnement</th>\
+                        <td>' + (feature.properties['Type de conventionnement'] !== null ? autolinker.link(feature.properties['Type de conventionnement'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['SIRET'] !== null ? autolinker.link(feature.properties['SIRET'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">SIRET</th>\
+                        <td>' + (feature.properties['SIRET'] !== null ? autolinker.link(feature.properties['SIRET'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Adresse</th>\
+                        <td>' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Effectifs de salariés accompagnés (en ETP) en 2022'] !== null ? autolinker.link(feature.properties['Effectifs de salariés accompagnés (en ETP) en 2022'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Effectifs de salariés accompagnés (en ETP) en 2022</th>\
+                        <td>' + (feature.properties['Effectifs de salariés accompagnés (en ETP) en 2022'] !== null ? autolinker.link(feature.properties['Effectifs de salariés accompagnés (en ETP) en 2022'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Activité'] !== null ? autolinker.link(feature.properties['Activité'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Activité</th>\
+                        <td>' + (feature.properties['Activité'] !== null ? autolinker.link(feature.properties['Activité'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Latitude</th>\
+                        <td>' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Longitude'] !== null ? autolinker.link(feature.properties['Longitude'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Longitude</th>\
+                        <td>' + (feature.properties['Longitude'] !== null ? autolinker.link(feature.properties['Longitude'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
