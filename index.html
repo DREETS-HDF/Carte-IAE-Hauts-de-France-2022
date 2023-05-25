@@ -37,11 +37,11 @@
         <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
         <script src="js/leaflet.markercluster.js"></script>
         <script src="js/leaflet-search.js"></script>
-        <script src="data/SIAEconventionnes2022_1.js"></script>
+        <script src="data/SIAEconventionnes2023_1.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[48.15784616833727,-0.3889668904576],[52.4909651683399,5.864567054428079]]);
+        }).fitBounds([[47.288607562111494,-0.006378461166899108],[51.62172656211412,7.740567994086413]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -63,49 +63,41 @@
         });
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
-        function pop_SIAEconventionnes2022_1(feature, layer) {
+        function pop_SIAEconventionnes2023_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Raison sociale</th>\
-                        <td>' + (feature.properties['Raison sociale'] !== null ? autolinker.link(feature.properties['Raison sociale'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Raison sociale'] !== null ? autolinker.link(feature.properties['Raison sociale'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Type de conventionnement</th>\
-                        <td>' + (feature.properties['Type de conventionnement'] !== null ? autolinker.link(feature.properties['Type de conventionnement'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Type de conventionnement'] !== null ? autolinker.link(feature.properties['Type de conventionnement'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">SIRET</th>\
-                        <td>' + (feature.properties['SIRET'] !== null ? autolinker.link(feature.properties['SIRET'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['SIRET'] !== null ? autolinker.link(feature.properties['SIRET'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Adresse</th>\
-                        <td>' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Effectifs de salariés en insertion accompagnés en 2021</th>\
-                        <td>' + (feature.properties['Effectifs de salariés en insertion accompagnés en 2021'] !== null ? autolinker.link(feature.properties['Effectifs de salariés en insertion accompagnés en 2021'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Effectifs de salariés accompagnés (en ETP) en 2022'] !== null ? autolinker.link(feature.properties['Effectifs de salariés accompagnés (en ETP) en 2022'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Activité</th>\
-                        <td>' + (feature.properties['Activité'] !== null ? autolinker.link(feature.properties['Activité'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Activité'] !== null ? autolinker.link(feature.properties['Activité'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Latitude</th>\
-                        <td>' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Longitude</th>\
-                        <td>' + (feature.properties['Longitude'] !== null ? autolinker.link(feature.properties['Longitude'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Longitude'] !== null ? autolinker.link(feature.properties['Longitude'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_SIAEconventionnes2022_1_0(feature) {
+        function style_SIAEconventionnes2023_1_0(feature) {
             switch(String(feature.properties['Type de conventionnement'])) {
                 case 'ACI':
                     return {
-                pane: 'pane_SIAEconventionnes2022_1',
+                pane: 'pane_SIAEconventionnes2023_1',
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
@@ -117,7 +109,7 @@
                     break;
                 case 'AI':
                     return {
-                pane: 'pane_SIAEconventionnes2022_1',
+                pane: 'pane_SIAEconventionnes2023_1',
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
@@ -129,7 +121,7 @@
                     break;
                 case 'EI':
                     return {
-                pane: 'pane_SIAEconventionnes2022_1',
+                pane: 'pane_SIAEconventionnes2023_1',
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
@@ -141,7 +133,7 @@
                     break;
                 case 'EITI':
                     return {
-                pane: 'pane_SIAEconventionnes2022_1',
+                pane: 'pane_SIAEconventionnes2023_1',
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
@@ -153,7 +145,7 @@
                     break;
                 case 'ETTI':
                     return {
-                pane: 'pane_SIAEconventionnes2022_1',
+                pane: 'pane_SIAEconventionnes2023_1',
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
@@ -165,30 +157,30 @@
                     break;
             }
         }
-        map.createPane('pane_SIAEconventionnes2022_1');
-        map.getPane('pane_SIAEconventionnes2022_1').style.zIndex = 401;
-        map.getPane('pane_SIAEconventionnes2022_1').style['mix-blend-mode'] = 'normal';
-        var layer_SIAEconventionnes2022_1 = new L.geoJson(json_SIAEconventionnes2022_1, {
+        map.createPane('pane_SIAEconventionnes2023_1');
+        map.getPane('pane_SIAEconventionnes2023_1').style.zIndex = 401;
+        map.getPane('pane_SIAEconventionnes2023_1').style['mix-blend-mode'] = 'normal';
+        var layer_SIAEconventionnes2023_1 = new L.geoJson(json_SIAEconventionnes2023_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_SIAEconventionnes2022_1',
-            layerName: 'layer_SIAEconventionnes2022_1',
-            pane: 'pane_SIAEconventionnes2022_1',
-            onEachFeature: pop_SIAEconventionnes2022_1,
+            dataVar: 'json_SIAEconventionnes2023_1',
+            layerName: 'layer_SIAEconventionnes2023_1',
+            pane: 'pane_SIAEconventionnes2023_1',
+            onEachFeature: pop_SIAEconventionnes2023_1,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.marker(latlng, style_SIAEconventionnes2022_1_0(feature));
+                return L.marker(latlng, style_SIAEconventionnes2023_1_0(feature));
             },
         });
-        var cluster_SIAEconventionnes2022_1 = new L.MarkerClusterGroup({showCoverageOnHover: false,
+        var cluster_SIAEconventionnes2023_1 = new L.MarkerClusterGroup({showCoverageOnHover: false,
             spiderfyDistanceMultiplier: 2});
-        cluster_SIAEconventionnes2022_1.addLayer(layer_SIAEconventionnes2022_1);
+        cluster_SIAEconventionnes2023_1.addLayer(layer_SIAEconventionnes2023_1);
 
-        bounds_group.addLayer(layer_SIAEconventionnes2022_1);
-        cluster_SIAEconventionnes2022_1.addTo(map);
+        bounds_group.addLayer(layer_SIAEconventionnes2023_1);
+        cluster_SIAEconventionnes2023_1.addTo(map);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
@@ -200,10 +192,10 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'SIAE conventionnées 2022<br /><table><tr><td style="text-align: center;"><img src="legend/SIAEconventionnes2022_1_ACI0.png" /></td><td>ACI</td></tr><tr><td style="text-align: center;"><img src="legend/SIAEconventionnes2022_1_AI1.png" /></td><td>AI</td></tr><tr><td style="text-align: center;"><img src="legend/SIAEconventionnes2022_1_EI2.png" /></td><td>EI</td></tr><tr><td style="text-align: center;"><img src="legend/SIAEconventionnes2022_1_EITI3.png" /></td><td>EITI</td></tr><tr><td style="text-align: center;"><img src="legend/SIAEconventionnes2022_1_ETTI4.png" /></td><td>ETTI</td></tr></table>': cluster_SIAEconventionnes2022_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'SIAE conventionnées 2023<br /><table><tr><td style="text-align: center;"><img src="legend/SIAEconventionnes2023_1_ACI0.png" /></td><td>ACI</td></tr><tr><td style="text-align: center;"><img src="legend/SIAEconventionnes2023_1_AI1.png" /></td><td>AI</td></tr><tr><td style="text-align: center;"><img src="legend/SIAEconventionnes2023_1_EI2.png" /></td><td>EI</td></tr><tr><td style="text-align: center;"><img src="legend/SIAEconventionnes2023_1_EITI3.png" /></td><td>EITI</td></tr><tr><td style="text-align: center;"><img src="legend/SIAEconventionnes2023_1_ETTI4.png" /></td><td>ETTI</td></tr></table>': cluster_SIAEconventionnes2023_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
         setBounds();
         map.addControl(new L.Control.Search({
-            layer: cluster_SIAEconventionnes2022_1,
+            layer: cluster_SIAEconventionnes2023_1,
             initial: false,
             hideMarkerOnCollapse: true,
             propertyName: 'Raison sociale'}));
